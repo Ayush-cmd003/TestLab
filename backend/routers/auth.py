@@ -17,7 +17,7 @@ from backend.core.security import encrypt_api_key
 import secrets
 from backend.core.email_service import send_otp_email
 
-ENV = os.getenv("ENV", "qa")
+ENV = os.getenv("env", "qa")
 
 if ENV == "prod":
     load_dotenv(".env.prod")
