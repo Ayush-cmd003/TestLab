@@ -2,11 +2,8 @@ from fastapi import HTTPException, status
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from dotenv import load_dotenv
 import ssl
 import os
-
-load_dotenv()
 
 def send_otp_email(receiver_email: str, otp: str):
     sender_email = os.getenv("MAIL_USERNAME")
@@ -46,7 +43,7 @@ Smarter testing starts here.
     context = ssl.create_default_context()
 
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=10) as server:
             server.ehlo()
             server.starttls(context=context)
             server.ehlo()
