@@ -20,7 +20,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://testlab-workspace.vercel.app"
+        "https://testslab.in",
+        "https://www.testslab.in",
     ],
     allow_credentials=True,
     allow_methods=["*"],
