@@ -7,11 +7,13 @@ resend.api_key = os.getenv("RESEND_API_KEY")
 def send_otp_email(receiver_email: str, otp: str):
     try:
         resend.Emails.send({
-            "from": "onboarding@resend.dev",
+            "from": "TestLab <security@testslab.in>",
             "to": receiver_email,
             "subject": "Verify Your TestLab Account",
             "text": f"""
 Hi there,
+
+Welcome to TestLab.
 
 Your verification code for TestLab is:
 
