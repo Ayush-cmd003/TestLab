@@ -54,8 +54,6 @@ function Projects() {
         } catch (err) {
             if (err.name === "AbortError") return;
             const message = "Search failed";
-            toast.error(message);
-
             setProjects([]);
             setNoResults(message);
         }
