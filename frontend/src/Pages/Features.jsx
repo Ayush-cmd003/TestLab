@@ -64,7 +64,6 @@ export default function Features() {
         } catch (err) {
             if (err.name === "AbortError") return;
             const message = "Search failed";
-            toast.error(message);
             setFeatures([]);
             setNoResults(message);
         }
