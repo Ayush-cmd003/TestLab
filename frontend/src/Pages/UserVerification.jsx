@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { userVerificationService } from '../Services/verifyUserApi';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MailCheck, RefreshCw, ShieldCheck, ArrowRight } from 'lucide-react';
+import { MailCheck, RefreshCw, CheckCircle2, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 
 const OTP_LENGTH = 6;
