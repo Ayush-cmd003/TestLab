@@ -101,7 +101,7 @@ class TestCase(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     feature_id = Column(UUID(as_uuid=True), ForeignKey("features.id", ondelete="CASCADE"), nullable=False)
     user_id = Column(UUID(as_uuid=True), nullable=False)
-    testcase_id = Column(String, unique=True)
+    testcase_id = Column(String)
     testcase_name = Column(String)
     testcase_type = Column(String)
     pre_conditions = Column(JSONB)
